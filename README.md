@@ -2,7 +2,7 @@
 
 This repository is a restructure of the [cub-uanic](https://github.com/cub-uanic/tmk_keyboard) fork of [`tmk_keyboard`](https://github.com/tmk/tmk_keyboard). It is no longer possible to add keyboard layouts directly to the [`tmk_keyboard`](https://github.com/tmk/tmk_keyboard) repository - see [tmk#173](https://github.com/tmk/tmk_keyboard/issues/173). The new suggested workflow is to add [`tmk_core`](https://github.com/tmk/tmk_core) as a submodule of your project, which is why this repository exists.
 
-## Default layouts
+## Layouts
 
 Support for the following layouts are available out of the box:
 
@@ -12,6 +12,28 @@ Support for the following layouts are available out of the box:
 - [ ] Workman
 
 These can be used as they are, or can be a starting point for [customisation](#custom-layouts).
+
+### New layouts
+
+#### Initial setup
+
+First, ensure you have cloned the repository as above. Secondly, I recommend you create a new [git branch](https://git-scm.com/docs/git-branch) for your layout. This will allow you to quickly and easily pull in any changes without the risk of overwriting your layout. In this example, we will use the name `foo` as a placeholder for your layout name.
+
+```
+git checkout -b foo
+```
+
+#### Create layout file
+
+While it is certainly possible to create your own layout from scratch, I recommend using an existing layout as a base to save time. For example, if you usually use the `QWERTY` layout, I recommend you start with `keymap_blazak.c`.
+
+```
+cp keymap_blazak.c keymap_foo.c
+```
+
+#### Modify layout
+
+Now you are free to modify and experiment with changes, without affecting the underlying project. Commit your changes as you go along so you have a working history of your layout.
 
 ### Cloning
 
@@ -42,27 +64,6 @@ Once you have built your firmware, load it onto your ErgoDox using [Teensy Loade
 make teensy
 ```
 
-### Custom layouts
-
-#### Initial setup
-
-First, ensure you have cloned the repository as above. Secondly, I recommend you create a new [git branch](https://git-scm.com/docs/git-branch) for your layout. This will allow you to quickly and easily pull in any changes without the risk of overwriting your layout. In this example, we will use the name `foo` as a placeholder for your layout name.
-
-```
-git checkout -b foo
-```
-
-#### Create layout file
-
-While it is certainly possible to create your own layout from scratch, I recommend using an existing layout as a base to save time. For example, if you usually use the `QWERTY` layout, I recommend you start with `keymap_blazak.c`.
-
-```
-cp keymap_blazak.c keymap_foo.c
-```
-
-#### Modify layout
-
-Now you are free to modify and experiment with changes, without affecting the underlying project. Commit your changes as you go along so you have a working history of your layout.
 
 #### Pulling in changes from the main repository
 
