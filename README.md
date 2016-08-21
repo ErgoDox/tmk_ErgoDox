@@ -2,9 +2,9 @@
 
 ## Building
 
-### Dependancies
+### Dependencies
 
-Mandatory:
+#### Mandatory:
 
  * `avr-gcc`
  * `avr-libc`
@@ -16,7 +16,7 @@ Mandatory:
 
 All these binaries, except the GUI loader, must be accessible through the PATH env var _of the user that has write access to the teensy._
 
-Recommended:
+#### Recommended:
 
  * Udev rules for accessing the teensy as a normal user.
    * Available [here](http://www.pjrc.com/teensy/49-teensy.rules)
