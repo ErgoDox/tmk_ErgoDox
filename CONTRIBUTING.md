@@ -32,4 +32,4 @@ git commit -m "My new hotfix"
 git push -u origin my_new_hotfix
 ```
 
-Use github to PR aginst master.
+Use github to PR against master.
