@@ -65,15 +65,6 @@ keymap_name.c.template has no keymap defined and all the keymap templates in one
 If the keycodes are hard to figure out, /tmk_core/common/keycode.h has the whole list avalable.
 Please drop the `KC_' for each keycode when using keycodes from `keycode.h'.
 
-## Updateing your fork
-
-```sh
-git checkout master
-git pull
-git checkout foo
-git merge master
-```
-
 ### Submitting changes
 
 Refer to [contributeing](CONTRIBUTEING.md)
