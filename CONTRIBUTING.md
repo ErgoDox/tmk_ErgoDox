@@ -1,18 +1,30 @@
-# Issues
+# TMK-Core ErgoDox Firmware
 
-If you find an issue with this repository, please create a [new Issue](https://github.com/squarefrog/tmk_ergodox/issues/new). If it is an issue with the underlying `tmk_core` code, then you should submit your issue to [tmk core](https://github.com/tmk/tmk_core/issues/new).
+## Issues
 
-# Pull Requests
+If issues or bugs are found with this repository, create a [New Issue](https://github.com/ergodox/ergodox/issues/new). It is possible to get build errors from `tmk_core` code with incorrect settings, ask for help before sending issues upstream.
 
-If you would like to make a change to this repository, I'd be delighted to review a [Pull Request](https://github.com/squarefrog/tmk_ergodox/compare). I'd prefer it if you used a feature branch to track your changes:
+## New Keymaps
+
+Keymap contributions can be submitted through a PR or if the contributor does not feel comfortable with git open an Issue and ask for help.
+
+## Pull Requests
+
+If improvements can be made to code not from the `tmk_core` folder, submit a PR on a feature branch. If the PR will be fixing a pre-existing [Issue](https://github.com/ergodox/ergodox/issues) please reference it by issue number.
+
+
+### Example workflow
+
+Use github to fork.
 
 ```
+git clone --recursive https://github.com/<Github Username>/ergodox.git
 git checkout master
 git pull
 git checkout -b my_new_hotfix
 ```
 
-Then make your improvements...
+[Edit Code]
 
 ```
 git add .
@@ -20,5 +32,4 @@ git commit -m "My new hotfix"
 git push -u origin my_new_hotfix
 ```
 
-Finally, open a new [Pull Request](https://github.com/squarefrog/tmk_ergodox/compare). If your Pull Request is in response to an Issue, then reference the issue within the Pull Request to make it easier to follow.
-
+Use github to PR against master.
