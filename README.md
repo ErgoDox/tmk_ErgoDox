@@ -4,17 +4,14 @@
 
 ### Dependencies
 
-#### Mandatory:
+#### Required:
 
  * `avr-gcc`
  * `avr-libc`
- * `dfu-programmer`
  * if using `make teensy` to copy firmware
    * [teensy_loader_cli](https://github.com/PaulStoffregen/teensy_loader_cli)
  * if using GUI Teensy loader
    * [Teensy Loader](https://www.pjrc.com/teensy/loader.html).
-
-All these binaries, except the GUI loader, must be accessible through the PATH env var _of the user that has write access to the teensy._
 
 #### Recommended:
 
@@ -23,7 +20,7 @@ All these binaries, except the GUI loader, must be accessible through the PATH e
    * If the administrator is worried about rampant access, read the
      comments in the .rules file
 
-### Initial setup
+### Get and Build
 
 ```sh
 git clone --recursive https://github.com/ergodox/ergodox.git
@@ -42,7 +39,7 @@ make teensy
 Or:
 
 Use [Teensy Loader](https://www.pjrc.com/teensy/loader.html).
-`ergodox_lufa.hex` is the firmware file to use with this.
+on `ergodox_lufa.hex`.
 
 ## Layouts
 
@@ -71,22 +68,8 @@ nano keymap_title.c
 make KEYMAP=title
 ```
 
-Advanced techniques discussed in [customization]().
+Advanced keymaping techniques discussed [here](doc/Advanced-keymaps.md).
 
-#### From scratch
-
-##### File Names
-
-Keymap file names must be in this form `keymap_${name}` where `${name}` is replaced with the new keymap name.
-
-##### File Format
-
-It is recommend to get familiar with one of the existing examples. Before diving head first into this.
-
-`keymap_name.c.template` has no keymap defined and all the keymap templates in one place.
-If the keycodes are hard to figure out, `/tmk_core/common/keycode.h` has the whole list available.
-Please drop the `KC_' for each keycode when using keycodes from `keycode.h'.
-
-### Submitting changes
+## Submitting changes
 
 Refer to [Contributing](CONTRIBUTING.md)
