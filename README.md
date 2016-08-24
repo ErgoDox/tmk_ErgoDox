@@ -46,9 +46,9 @@ on `ergodox_lufa.hex`.
 Support for the following layouts are available out of the box:
 
 - [x] Qwerty: `keymap_qwerty.c`
-- [ ] Colemak
-- [ ] Dvorak
-- [ ] Workman
+- [x] Colemak: `keymap_colmak.c`
+- [x] Dvorak: `keymap_dvorak_simplified.c`
+- [x] Workman: `keymap_workman.c`
 
 If your language is unsupported and you do not feel comfortable writing one, post an issue on github.
 It is recommended that personal layouts be under [version control](http://oss-watch.ac.uk/resources/versioncontrol) so changes are easily reversed.
