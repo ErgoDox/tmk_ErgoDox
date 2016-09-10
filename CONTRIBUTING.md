@@ -20,8 +20,9 @@ Submit PR against master.
 
 Use github to fork.
 
-```
-git clone --recursive https://github.com/<Github Username>/ergodox.git
+```sh
+git clone --recursive https://github.com/<Github Username>/tmk_ergodox.git
+# If the repository has alredy been cloned. => git submodule init; git submodule update
 git checkout master
 git pull
 git checkout -b my_new_hotfix
@@ -29,7 +30,7 @@ git checkout -b my_new_hotfix
 
 [Edit Code]
 
-```
+```sh
 git add .
 git commit -m "My new hotfix"
 git push -u origin my_new_hotfix
