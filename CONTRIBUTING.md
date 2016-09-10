@@ -2,7 +2,8 @@
 
 ## Issues
 
-If issues or bugs are found with this repository, create a [New Issue](https://github.com/ergodox/ergodox/issues/new). It is possible to get build errors from `tmk_core` code with incorrect settings, ask for help before sending issues upstream.
+If issues or bugs are found with this repository, create a [New Issue](https://github.com/ergodox/tmk_ergodox/issues/new).
+It is possible to get build errors from `tmk_core` code with incorrect settings, ask for help before sending issues upstream.
 
 ## New Keymaps
 
@@ -10,7 +11,8 @@ Keymap contributions can be submitted through a PR or if the contributor does no
 
 ## Pull Requests
 
-If improvements can be made to code not from the `tmk_core` folder, submit a PR on a feature branch. If the PR will be fixing a pre-existing [Issue](https://github.com/ergodox/ergodox/issues) please reference it by issue number.
+If improvements can be made to code not from the `tmk_core` folder, submit a PR on a feature branch.
+If the PR will be fixing a pre-existing [Issue](https://github.com/ergodox/tmk_ergodox/issues) please reference it by issue number in the commit that fixes the issue.
 
 Submit PR against master.
 
