@@ -18,7 +18,7 @@ Submit PR against master.
 
 ### Example workflow
 
-Use github to fork.
+- Use github to fork.
 
 ```sh
 git clone --recursive https://github.com/<Github Username>/tmk_ergodox.git
@@ -28,7 +28,7 @@ git pull
 git checkout -b my_new_hotfix
 ```
 
-[Edit Code]
+- [Edit Code]
 
 ```sh
 git add .
