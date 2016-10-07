@@ -8,8 +8,8 @@
 
  * `avr-gcc`
  * `avr-libc`
- * if using `make teensy` to copy firmware
-   * [teensy_loader_cli](https://github.com/PaulStoffregen/teensy_loader_cli)
+ * if using terminal tools to copy firmware
+   * [dfu-programmer](https://dfu-programmer.github.io); `pacman -S dfu-programmer`
  * if using GUI Teensy loader
    * [Teensy Loader](https://www.pjrc.com/teensy/loader.html).
 
@@ -30,16 +30,18 @@ make KEYMAP=qwerty
 
 Binaries are dropped into the root dir of the repo.
 
-Install it to the ErgoDox like this:
+Install<sup>[1][teensy_install]</sup> it to the ErgoDox like this:
 
 ```sh
-make teensy
+make dfu
 ```
-
 Or:
 
 Use [Teensy Loader](https://www.pjrc.com/teensy/loader.html).
 on `ergodox_lufa.hex`.
+
+[teensy_install]: #
+(Other installation options are covered in ./Makefile)
 
 ## Layouts
 
