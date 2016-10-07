@@ -132,3 +132,5 @@ void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
         print("not supported.\n");
     }
 }
+
+void ergodox_set_left_leds(){}

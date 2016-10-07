@@ -34,6 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 extern const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS];
 extern const uint16_t fn_actions[];
 
+void ergodox_set_left_leds(void);
 
 /* ErgoDox keymap definition macro */
 #define KEYMAP(                                                 \
