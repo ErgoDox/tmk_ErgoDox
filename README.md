@@ -1,5 +1,10 @@
 # TMK-Core ErgoDox Firmware
 
+currently unsupported:
+ - 16 bit char output
+  - [qmk](https://github.com/jackhumbert/qmk_firmware)
+    supports 16 bit chars, but currently has no support for i2c ErgoDox.
+
 ## Building
 
 ### Dependencies
