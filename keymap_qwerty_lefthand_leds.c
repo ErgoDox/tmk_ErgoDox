@@ -1,5 +1,5 @@
 /*
-Copyright 2013 Oleg Kostyuk <cub.uanic@gmail.com>
+Copyright 2016 R. Fontenot <me@robertfontenot.work>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,9 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <util/delay.h>
 #include "bootloader.h"
 #include "keymap_common.h"
-#include "ergodox.h" //mcp23018_status
-#include "action_layer.h" //layer_state
-
 
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(  // layer 0 : default
@@ -135,9 +132,10 @@ void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
     }
 }
 
-// anything that manipulates the left hand leds goes here
-// this is an example that uses the leds to display current layer
-void ergodox_set_left_leds()
+// tmk calls this function when the layer changes
+// Here, it is being used to display current layer
+// state on the left hand leds.
+void hook_layer_change(uint32_t layer_state)
 {
     uint8_t layer = biton32(layer_state);
 
@@ -145,7 +143,7 @@ void ergodox_set_left_leds()
     ergodox_left_led_1_off();
     ergodox_left_led_2_off();
     ergodox_left_led_3_off();
-    //ledstate comments teensy_led,led3,led2,led1
+    //comment ref teensy_led,led3,led2,led1
     switch (layer) {
         case 1: // 0001
             ergodox_left_led_1_on();
@@ -182,6 +180,7 @@ void ergodox_set_left_leds()
             break;
     }
 
-    mcp23018_status = ergodox_left_leds_update();
+    // write through i2c interface to mcp23018
+    ergodox_left_leds_update();
 
 }
