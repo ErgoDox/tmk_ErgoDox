@@ -114,7 +114,7 @@ enum function_id {
 /*
  * Fn action definition
  */
-const uint16_t PROGMEM fn_actions[] = {
+const action_t PROGMEM fn_actions[] = {
     ACTION_FUNCTION(TEENSY_KEY),                    // FN0 - Teensy key
     ACTION_LAYER_MOMENTARY(1),                      // FN1 - switch to Layer1
     ACTION_LAYER_SET(2, ON_PRESS),                  // FN2 - set Layer2
