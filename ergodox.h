@@ -24,6 +24,9 @@ Most used files are located at
 
 */
 
+#ifndef ERGODOX_H
+#define ERGODOX_H
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <avr/io.h>
@@ -114,3 +117,4 @@ inline void ergodox_led_all_set(uint8_t n)
     ergodox_right_led_3_set(n);
 }
 
+#endif
